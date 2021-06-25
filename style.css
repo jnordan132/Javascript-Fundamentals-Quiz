@@ -31,6 +31,13 @@ body {
     border-radius: 30px 30px;
     line-height: 150%;
     margin: 3%;
+    cursor: pointer;
+}
+
+#questionsDiv ul :hover {
+    list-style-type: none;
+    background-color: rgb(75, 156, 211, .5);
+    color: grey;
 }
 
 #currentTime {
