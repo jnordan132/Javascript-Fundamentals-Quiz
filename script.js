@@ -50,7 +50,6 @@ const multiChoiceQuestions = [{
         answer: "C. // this is a comment"
     }
 ];
-
 // Event listener to start timer, and display questions
 timer.addEventListener("click", function() {
     if (pauseInterval === 0) {
@@ -66,7 +65,6 @@ timer.addEventListener("click", function() {
     }
     display(questionsIndex);
 });
-
 // Displays questions and answers
 function display(questionsIndex) {
     questionsContainer.innerHTML = "";
@@ -84,8 +82,7 @@ function display(questionsIndex) {
         listItem.addEventListener("click", (compare));
     })
 };
-
-// Event to compare choices with answer
+// Compare choices with answers
 function compare(event) {
     let element = event.target;
     if (element.matches("li")) {
@@ -108,8 +105,7 @@ function compare(event) {
     }
     questionsContainer.appendChild(createDiv);
 };
-
-// All done will append last page
+// Finished will append second to last page (initials and save score)
 function finished() {
     questionsContainer.innerHTML = "";
     timeLeft.innerHTML = "";
@@ -120,7 +116,7 @@ function finished() {
     const createP = document.createElement("p");
     createP.id = "createP";
     questionsContainer.appendChild(createP);
-    // Calculates time remaining and replaces with score
+    // Calculates time remaining and questions right; replaces with score
     if (startTime >= 0) {
         var timeRemaining = startTime;
         const createP2 = document.createElement("p");
@@ -132,7 +128,7 @@ function finished() {
     infoPrompt.id = "createLabel";
     infoPrompt.textContent = "Enter your initials: ";
     questionsContainer.appendChild(infoPrompt);
-    // User initials
+    // Input initials
     const userInitials = document.createElement("input");
     userInitials.type = "text";
     userInitials.id = "initials";
@@ -144,8 +140,7 @@ function finished() {
     saveInfo.id = "Submit";
     saveInfo.textContent = "Submit";
     questionsContainer.appendChild(saveInfo);
-
-    // Event listener for initials/score for local storage
+    // Stores initials/score in local storage
     saveInfo.addEventListener("click", function() {
         var initials = userInitials.value;
         if (initials === "") {
