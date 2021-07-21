@@ -13,7 +13,7 @@ body {
     height: 700px;
 }
 
-#startTime {
+#timer {
     background-color: rgb(75, 156, 211);
     margin-left: 33%;
     padding: 15px 32px;
@@ -22,11 +22,11 @@ body {
     border: 2px solid black;
 }
 
-#questionsDiv {
+#questionsContainer {
     text-align: center;
 }
 
-#questionsDiv ul li {
+#questionsContainer ul li {
     border: 2px solid black;
     border-radius: 30px 30px;
     line-height: 150%;
@@ -34,17 +34,17 @@ body {
     cursor: pointer;
 }
 
-#questionsDiv ul :hover {
+#questionsContainer ul :hover {
     list-style-type: none;
     background-color: rgb(75, 156, 211, .5);
     color: grey;
 }
 
-#currentTime {
+#timeLeft {
     float: right;
 }
 
-#goBack {
+#retake {
     display: block;
     margin-left: auto;
     margin-right: auto;
